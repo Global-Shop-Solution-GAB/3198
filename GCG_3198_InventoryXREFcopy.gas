@@ -1,0 +1,566 @@
+Program.Sub.ScreenSU.Start
+gui.frmXREFCopy..create
+gui.frmXREFCopy..caption("Inventory Xref Copy")
+gui.frmXREFCopy..size(6075,5880)
+gui.frmXREFCopy..minx(0)
+gui.frmXREFCopy..miny(0)
+gui.frmXREFCopy..position(0,0)
+gui.frmXREFCopy..event(unload,frmxrefcopy_unload)
+gui.frmXREFCopy..alwaysontop(False)
+gui.frmXREFCopy..fontname("Arial")
+gui.frmXREFCopy..fontsize(8)
+gui.frmXREFCopy..forecolor(0)
+gui.frmXREFCopy..fontstyle(,,,,)
+gui.frmXREFCopy..BackColor(-2147483633)
+gui.frmXREFCopy..controlbox(True)
+gui.frmXREFCopy..maxbutton(False)
+gui.frmXREFCopy..minbutton(False)
+gui.frmXREFCopy..mousepointer(0)
+gui.frmXREFCopy..moveable(True)
+gui.frmXREFCopy..sizeable(False)
+gui.frmXREFCopy..ShowInTaskBar(True)
+gui.frmXREFCopy..titlebar(True)
+gui.frmXREFCopy.lbl1.create(label,"Begining",True,1935,255,1,200,770,True,0,Arial,8,-2147483633,0)
+gui.frmXREFCopy.lbl1.defaultvalue("")
+gui.frmXREFCopy.lbl1.controlgroup(0)
+gui.frmXREFCopy.lbl2.create(label,"Part no",True,1935,255,1,2180,95,True,0,Arial,8,-2147483633,0)
+gui.frmXREFCopy.lbl2.defaultvalue("")
+gui.frmXREFCopy.lbl2.controlgroup(0)
+gui.frmXREFCopy.lbl3.create(label,"Cust Xref",True,1935,255,1,4025,95,True,0,Arial,8,-2147483633,0)
+gui.frmXREFCopy.lbl3.defaultvalue("")
+gui.frmXREFCopy.lbl3.controlgroup(0)
+gui.frmXREFCopy.txtcustomer.create(textbox,"",True,1215,300,0,100,320,True,0,Arial,8,-2147483643,1)
+gui.frmXREFCopy.txtcustomer.defaultvalue("")
+gui.frmXREFCopy.txtcustomer.controlgroup(0)
+gui.frmXREFCopy.txtpartno.create(textbox,"",True,1380,300,0,1885,320,True,0,Arial,8,-2147483643,1)
+gui.frmXREFCopy.txtpartno.defaultvalue("")
+gui.frmXREFCopy.txtpartno.controlgroup(0)
+gui.frmXREFCopy.txtxref.create(textbox,"",True,1590,300,0,3765,320,True,0,Arial,8,-2147483643,1)
+gui.frmXREFCopy.txtxref.defaultvalue("")
+gui.frmXREFCopy.txtxref.controlgroup(0)
+gui.frmXREFCopy.cmdCustBrowse.create(button)
+gui.frmXREFCopy.cmdCustBrowse.caption("^")
+gui.frmXREFCopy.cmdCustBrowse.visible(True)
+gui.frmXREFCopy.cmdCustBrowse.size(405,285)
+gui.frmXREFCopy.cmdCustBrowse.zorder(0)
+gui.frmXREFCopy.cmdCustBrowse.position(1355,325)
+gui.frmXREFCopy.cmdCustBrowse.enabled(True)
+gui.frmXREFCopy.cmdCustBrowse.fontname("Arial")
+gui.frmXREFCopy.cmdCustBrowse.fontsize(8)
+gui.frmXREFCopy.cmdCustBrowse.event(click,cmdcustbrowse_click)
+gui.frmXREFCopy.cmdCustBrowse.defaultvalue("")
+gui.frmXREFCopy.cmdCustBrowse.controlgroup(0)
+gui.frmXREFCopy.cmdpartBrowse.create(button)
+gui.frmXREFCopy.cmdpartBrowse.caption("^")
+gui.frmXREFCopy.cmdpartBrowse.visible(True)
+gui.frmXREFCopy.cmdpartBrowse.size(405,285)
+gui.frmXREFCopy.cmdpartBrowse.zorder(0)
+gui.frmXREFCopy.cmdpartBrowse.position(3265,325)
+gui.frmXREFCopy.cmdpartBrowse.enabled(True)
+gui.frmXREFCopy.cmdpartBrowse.fontname("Arial")
+gui.frmXREFCopy.cmdpartBrowse.fontsize(8)
+gui.frmXREFCopy.cmdpartBrowse.event(click,cmdpartbrowse_click)
+gui.frmXREFCopy.cmdpartBrowse.defaultvalue("")
+gui.frmXREFCopy.cmdpartBrowse.controlgroup(0)
+gui.frmXREFCopy.lbl4.create(label,"Ending",True,1935,255,1,2190,770,True,0,Arial,8,-2147483633,0)
+gui.frmXREFCopy.lbl4.defaultvalue("")
+gui.frmXREFCopy.lbl4.controlgroup(0)
+gui.frmXREFCopy.lbl5.create(label,"Customer",True,1935,255,1,200,95,True,0,Arial,8,-2147483633,0)
+gui.frmXREFCopy.lbl5.defaultvalue("")
+gui.frmXREFCopy.lbl5.controlgroup(0)
+gui.frmXREFCopy.txtCustfrom.create(textbox,"",True,1215,300,0,100,995,True,0,Arial,8,-2147483643,1)
+gui.frmXREFCopy.txtCustfrom.defaultvalue("")
+gui.frmXREFCopy.txtCustfrom.controlgroup(0)
+gui.frmXREFCopy.txtCustTo.create(textbox,"",True,1380,300,0,1885,995,True,0,Arial,8,-2147483643,1)
+gui.frmXREFCopy.txtCustTo.defaultvalue("")
+gui.frmXREFCopy.txtCustTo.controlgroup(0)
+gui.frmXREFCopy.cmdCustfrom.create(button)
+gui.frmXREFCopy.cmdCustfrom.caption("^")
+gui.frmXREFCopy.cmdCustfrom.visible(True)
+gui.frmXREFCopy.cmdCustfrom.size(405,285)
+gui.frmXREFCopy.cmdCustfrom.zorder(0)
+gui.frmXREFCopy.cmdCustfrom.position(1355,985)
+gui.frmXREFCopy.cmdCustfrom.enabled(True)
+gui.frmXREFCopy.cmdCustfrom.fontname("Arial")
+gui.frmXREFCopy.cmdCustfrom.fontsize(8)
+gui.frmXREFCopy.cmdCustfrom.event(click,cmdcustfrom_click)
+gui.frmXREFCopy.cmdCustfrom.defaultvalue("")
+gui.frmXREFCopy.cmdCustfrom.controlgroup(0)
+gui.frmXREFCopy.cmdCustTo.create(button)
+gui.frmXREFCopy.cmdCustTo.caption("^")
+gui.frmXREFCopy.cmdCustTo.visible(True)
+gui.frmXREFCopy.cmdCustTo.size(405,285)
+gui.frmXREFCopy.cmdCustTo.zorder(0)
+gui.frmXREFCopy.cmdCustTo.position(3265,970)
+gui.frmXREFCopy.cmdCustTo.enabled(True)
+gui.frmXREFCopy.cmdCustTo.fontname("Arial")
+gui.frmXREFCopy.cmdCustTo.fontsize(8)
+gui.frmXREFCopy.cmdCustTo.event(click,cmdcustto_click)
+gui.frmXREFCopy.cmdCustTo.defaultvalue("")
+gui.frmXREFCopy.cmdCustTo.controlgroup(0)
+gui.frmXREFCopy.cmdAdd.create(button)
+gui.frmXREFCopy.cmdAdd.caption("Add")
+gui.frmXREFCopy.cmdAdd.visible(True)
+gui.frmXREFCopy.cmdAdd.size(855,375)
+gui.frmXREFCopy.cmdAdd.zorder(0)
+gui.frmXREFCopy.cmdAdd.position(4035,910)
+gui.frmXREFCopy.cmdAdd.enabled(True)
+gui.frmXREFCopy.cmdAdd.fontname("Arial")
+gui.frmXREFCopy.cmdAdd.fontsize(8)
+gui.frmXREFCopy.cmdAdd.event(click,cmdadd_click)
+gui.frmXREFCopy.cmdAdd.defaultvalue("")
+gui.frmXREFCopy.cmdAdd.controlgroup(0)
+gui.frmXREFCopy.cmdclear.create(button)
+gui.frmXREFCopy.cmdclear.caption("Clear")
+gui.frmXREFCopy.cmdclear.visible(True)
+gui.frmXREFCopy.cmdclear.size(855,375)
+gui.frmXREFCopy.cmdclear.zorder(0)
+gui.frmXREFCopy.cmdclear.position(100,1480)
+gui.frmXREFCopy.cmdclear.enabled(True)
+gui.frmXREFCopy.cmdclear.fontname("Arial")
+gui.frmXREFCopy.cmdclear.fontsize(8)
+gui.frmXREFCopy.cmdclear.event(click,cmdclear_click)
+gui.frmXREFCopy.cmdclear.defaultvalue("")
+gui.frmXREFCopy.cmdclear.controlgroup(0)
+gui.frmXREFCopy.cmdDelete.create(button)
+gui.frmXREFCopy.cmdDelete.caption("Delete")
+gui.frmXREFCopy.cmdDelete.visible(True)
+gui.frmXREFCopy.cmdDelete.size(855,375)
+gui.frmXREFCopy.cmdDelete.zorder(0)
+gui.frmXREFCopy.cmdDelete.position(1100,1480)
+gui.frmXREFCopy.cmdDelete.enabled(True)
+gui.frmXREFCopy.cmdDelete.fontname("Arial")
+gui.frmXREFCopy.cmdDelete.fontsize(8)
+gui.frmXREFCopy.cmdDelete.event(click,cmddelete_click)
+gui.frmXREFCopy.cmdDelete.defaultvalue("")
+gui.frmXREFCopy.cmdDelete.controlgroup(0)
+gui.frmXREFCopy.lvwCustomer.create(listview)
+gui.frmXREFCopy.lvwCustomer.view(3)
+gui.frmXREFCopy.lvwCustomer.visible(True)
+gui.frmXREFCopy.lvwCustomer.size(4905,2790)
+gui.frmXREFCopy.lvwCustomer.zorder(0)
+gui.frmXREFCopy.lvwCustomer.position(60,1950)
+gui.frmXREFCopy.lvwCustomer.enabled(True)
+gui.frmXREFCopy.lvwCustomer.fontname("Arial")
+gui.frmXREFCopy.lvwCustomer.fontsize(8)
+gui.frmXREFCopy.cmdCopy.create(button)
+gui.frmXREFCopy.cmdCopy.caption("Copy")
+gui.frmXREFCopy.cmdCopy.visible(True)
+gui.frmXREFCopy.cmdCopy.size(855,375)
+gui.frmXREFCopy.cmdCopy.zorder(0)
+gui.frmXREFCopy.cmdCopy.position(100,4880)
+gui.frmXREFCopy.cmdCopy.enabled(True)
+gui.frmXREFCopy.cmdCopy.fontname("Arial")
+gui.frmXREFCopy.cmdCopy.fontsize(8)
+gui.frmXREFCopy.cmdCopy.event(click,cmdcopy_click)
+gui.frmXREFCopy.cmdCopy.defaultvalue("")
+gui.frmXREFCopy.cmdCopy.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' RAN 12/11/2015
+' Project Name: - Quote 7288-0  Inventory XREF copy
+' Core Pipe
+
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+'Opens Connection
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+
+
+Gui.frmXREFCopy.txtCustfrom.Locked(true)
+Gui.frmXREFCopy.txtcustomer.Locked(true)
+Gui.frmXREFCopy.txtCustTo.Locked(true)
+Gui.frmXREFCopy.txtpartno.Locked(true)
+Gui.frmXREFCopy.txtxref.Locked(true)
+
+Gui.frmXREFCopy.lvwCustomer.AddListViewColumn("From",930,0)
+Gui.frmXREFCopy.lvwCustomer.AddListViewColumn("Customer Name",1450,0)
+Gui.frmXREFCopy.lvwCustomer.AddListViewColumn("To",930,0)
+Gui.frmXREFCopy.lvwCustomer.AddListViewColumn("Customer Name",1450,0)
+
+
+Gui.frmXREFCopy..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+program.sub.cmdcustto_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcustto_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmXREFCopy.txtcustTo.Text(V.Local.sRet(0).Trim)
+	Gui.frmXREFCopy.txtcustTo.SetMetaData(V.Local.sRet(1))
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcustto_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcustto_click.end
+
+program.sub.cmdcustfrom_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcustfrom_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmXREFCopy.txtcustfrom.Text(V.Local.sRet(0).trim)
+	Gui.frmXREFCopy.txtcustfrom.SetMetaData(V.Local.sRet(1))
+
+	Gui.frmXREFCopy.txtcustTo.Text(V.Local.sRet(0).trim)
+	Gui.frmXREFCopy.txtcustTo.SetMetaData(V.Local.sRet(1))
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcustfrom_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcustfrom_click.end
+
+program.sub.cmdcustbrowse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcustbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.sRet.Declare(String)
+
+
+
+V.Local.sTitles.Set("Customer*!*Name")
+
+V.Local.sSql.Set("select Customer,Name_Customer from v_customer_master inner join  v_INV_CROSS_REF on v_customer_master.Customer = v_INV_CROSS_REF.Customer")
+
+V.Local.sWidths.Set("1800*!*2700")
+
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitles)
+F.Intrinsic.String.Split(V.Local.sWidths,"*!*",V.Local.sWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser("Selection","con",V.Local.sSql,V.Local.sTitles,V.Local.sWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmXREFCopy.txtcustomer.Text(V.Local.sRet(0).Trim)
+
+	Gui.frmXREFCopy.txtpartno.text("")
+	Gui.frmXREFCopy.txtxref.Text("")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcustbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcustbrowse_click.end
+
+program.sub.cmdpartbrowse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdpartbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+V.Local.sSql.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.sWidths.Declare(String)
+V.Local.sRet.Declare(String)
+
+
+
+V.Local.sTitles.Set("Customer*!*Name")
+
+F.Intrinsic.String.Build("select part,description,customer_part from v_INV_CROSS_REF where customer_part <> '' and customer = '{0}'",V.Screen.frmXREFCopy!txtcustomer.Text,V.Local.sSql)
+
+V.Local.sWidths.Set("1800*!*2700*!*1800")
+
+F.Intrinsic.String.Split(V.Local.sTitles,"*!*",V.Local.sTitles)
+F.Intrinsic.String.Split(V.Local.sWidths,"*!*",V.Local.sWidths)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser("Selection","con",V.Local.sSql,V.Local.sTitles,V.Local.sWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmXREFCopy.txtpartno.Text(V.Local.sRet(0).Trim)
+	Gui.frmXREFCopy.txtxref.Text(V.Local.sRet(2).Trim)
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdpartbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdpartbrowse_click.end
+
+program.sub.cmdadd_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.llstkey.Declare(String)
+
+
+F.Intrinsic.Control.If(V.Screen.frmXREFCopy!txtCustfrom.Text,"=","")
+	F.Intrinsic.UI.Msgbox("Please select customer")
+	Gui.frmXREFCopy.txtCustfrom.SetFocus
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+V.Local.llstkey.Set(V.Screen.frmXREFCopy!lvwCustomer.ListItemCount)
+
+Gui.frmXREFCopy.lvwCustomer.AddListItem(V.Local.llstkey,V.Screen.frmXREFCopy!txtCustfrom.Text)
+Gui.frmXREFCopy.lvwCustomer.SetListItemSubItemText(V.Local.llstkey,1,V.Screen.frmXREFCopy!txtCustfrom.MetaData0)
+Gui.frmXREFCopy.lvwCustomer.SetListItemSubItemText(V.Local.llstkey,2,V.Screen.frmXREFCopy!txtCustTo.Text)
+Gui.frmXREFCopy.lvwCustomer.SetListItemSubItemText(V.Local.llstkey,3,V.Screen.frmXREFCopy!txtCustTo.MetaData0)
+
+Gui.frmXREFCopy.txtCustfrom.Text("")
+Gui.frmXREFCopy.txtCustfrom.ClearMetaData
+Gui.frmXREFCopy.txtCustTo.Text("")
+Gui.frmXREFCopy.txtCustTo.ClearMetaData
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdadd_click.end
+
+program.sub.cmdcopy_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdcopy_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.slvwo.Declare(String)
+V.Local.lcounter.Declare(Long)
+V.Local.lRet.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sRange.Declare(String)
+V.Local.sSql.Declare(String)
+
+
+V.Local.sfilevalue.Declare(String)
+
+V.Local.bRet.Declare(String)
+
+V.Local.sCustList.Declare(String)
+
+	
+F.Intrinsic.Control.If(V.Screen.frmXREFCopy!txtcustomer.Text,"=","")
+	F.Intrinsic.UI.Msgbox("Please select customer")
+	Gui.frmXREFCopy.txtcustomer.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.elseIf(V.Screen.frmXREFCopy!txtpartno.Text,"=","")
+	F.Intrinsic.UI.Msgbox("Please select partno")
+	Gui.frmXREFCopy.txtpartno.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.elseIf(V.Screen.frmXREFCopy!txtxref.Text,"=","")
+	F.Intrinsic.UI.Msgbox("Please select Xref")
+	Gui.frmXREFCopy.txtxref.SetFocus
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+Gui.frmXREFCopy.lvwCustomer.RetrieveAllListItems(V.Local.slvwo)
+F.Intrinsic.Control.If(V.Local.slvwo,"=","***NORETURN***")
+	F.Intrinsic.UI.Msgbox("Please add customer to the list")
+	Gui.frmXREFCopy.txtCustfrom.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.slvwo,"*!*",V.Local.slvwo)
+	F.Intrinsic.UI.InvokeWaitDialog("Copying Customer Xref")
+	Gui.frmXREFCopy..Visible(false)
+	F.Intrinsic.Control.For(V.Local.lcounter,V.Local.slvwo.LBound,V.Local.slvwo.UBound,1)
+		Gui.frmXREFCopy.lvwCustomer.RetrieveItemOrdinal(V.Local.lcounter,V.Local.lRet)
+		V.Local.sRange.set(V.Screen.frmXREFCopy!lvwCustomer.ListItemTextExtended(V.Local.lRet))
+		F.Intrinsic.String.Split(V.Local.sRange,"*!*",V.Local.sRange)
+'Customer  <> '{2}' exclude from company
+		F.Intrinsic.String.Build("select Customer from v_customer_master where Customer  between '{0}' and '{1}' and Customer  <> '{2}' ",V.Local.sRange(0),V.Local.sRange(2),V.Screen.frmXREFCopy!txtcustomer.text,V.Local.sSql)
+		F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+			V.Local.sCustList.Set(V.ODBC.con!rst.FieldValtrim!Customer)
+'customer <> '{4}' to avoid duplicate records
+			F.Intrinsic.String.Build("insert into INV_CROSS_REF (part,location,customer,customer_part,vendor,mfg_part,mfg_name,description, web_flag,user_defined_part,status,comment,prtid) (SELECT part,location,'{0}',customer_part,vendor,mfg_part,mfg_name,description, web_flag,user_defined_part,status,comment,prtid",V.Local.sCustList.Trim,V.Local.sSql)
+			F.Intrinsic.String.Build("{0} FROM v_INV_CROSS_REF where customer = '{1}' and part='{2}' and customer_part = '{3}' and customer <> '{4}') ",V.Local.sSql,V.Screen.frmXREFCopy!txtCustomer.Text,V.Screen.frmXREFCopy!txtpartno.Text,V.Screen.frmXREFCopy!txtxref.text,V.Local.sCustList.Trim,V.Local.sSql)
+			F.ODBC.Connection!con.Execute(V.Local.sSql)
+		F.Intrinsic.Control.endif
+		F.ODBC.con!rst.Close
+	F.Intrinsic.Control.Next(V.Local.lcounter)
+
+	F.Intrinsic.UI.Msgbox("Copy process Completed")
+	Gui.frmXREFCopy..Visible(true)
+	F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdcopy_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdcopy_click.end
+
+program.sub.cmdclear_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdclear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+Gui.frmXREFCopy.lvwCustomer.ClearItems
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdclear_click.end
+
+program.sub.cmddelete_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+Gui.frmXREFCopy.lvwCustomer.RemoveItem(V.Screen.frmXREFCopy!lvwCustomer.SelectedItemKey)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddelete_click.end
+
+program.sub.frmxrefcopy_unload.start
+F.Intrinsic.Control.SetErrorHandler("frmxrefcopy_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+F.ODBC.Connection!con.Close
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("frmxrefcopy_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3198_InventoryXREFcopy.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.frmxrefcopy_unload.end
+
+Program.Sub.Comments.Start
+${$0$}$Inventory XREF copy$}$RAN$}$12/9/2015
+Program.Sub.Comments.End
+
